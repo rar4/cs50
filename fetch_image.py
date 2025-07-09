@@ -1,8 +1,13 @@
 from pexels_api import API
 
-KEY = "PYr4229M9L4doSRnc73GeoCiZJphhR181v4MWHRZYQrmQzTRmV98m1mf"
 
-api = API(KEY)
+key = ""
+
+
+with open("pexesl.txt") as f:
+    key = f.readline()
+
+api = API(key)
 
 def fetch_image(query: str) -> str:
 
